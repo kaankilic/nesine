@@ -5,7 +5,6 @@ function CouponCard({ children, onClick, value, selected = false }) {
     const couponData = Object.values(coupon);
     const oddData = couponData.map(o => o.V.O).reduce( (a, b) => a * b , 1)*2;
     
-    console.log("coupon render");
     return (
         <div className="coupon-container">
             <div className="coupon-bets">

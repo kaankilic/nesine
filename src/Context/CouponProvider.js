@@ -8,8 +8,6 @@ const CouponProvider = ({ children }) => {
     const toggleCoupon = useCallback((rowID, ocgID, ocID) => {
         const ocData = rowID.OCG[ocgID].OC[ocID];
         if(ocData === null) return;
-        var startTime = new Date()
-        console.log(startTime);
 		setCoupon(prevCoupon => {
             const newCoupon = { ...prevCoupon };
             const { ID } = ocData;
@@ -30,8 +28,6 @@ const CouponProvider = ({ children }) => {
             };
             return newCoupon
 		})
-        var endTime = new Date()
-        console.log(endTime.getTime() - startTime.getTime(),"s");
     },[setCoupon])
 
 	return (

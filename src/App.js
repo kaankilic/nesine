@@ -10,8 +10,6 @@ function App() {
 	const [bets, setBets] = useState([]);
     const { toggleCoupon } = useCoupon();
 
-    console.log("app render");
-
     const loadBets = async() => {
 		try {
 			setLoading(true);
