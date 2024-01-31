@@ -1,0 +1,65 @@
+body {
+    position: relative;
+}
+
+.bets-container {
+    width: 100%;
+}
+
+.bets-container .bet-container {
+    display: grid;
+    grid-template-rows: repeat(1fr, 2);
+}
+
+.bets-container .bet-container {
+    flex-direction: column;
+}
+
+.bets-container  .bet-container .bet-header, .bets-container .bet-container .bet-row {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+}
+
+.bet-container .bet-row .cell, .bet-container .bet-header .cell {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+.bet-container .bet-header .cell {
+    padding: 3px 10px;
+    font-size: 13px;
+}
+.bet-container .bet-row .cell.selected {
+    background-color: yellow;
+
+}
+.bet-container .bet-row .cell:first-child, .bet-container .bet-header .cell:first-child {
+    border-left: 0px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+
+.coupon-container {
+    position: fixed;
+    bottom:0px;
+    right: 0px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.coupon-container .coupon-bets{
+    display: flex;
+    flex-direction: column;
+}
+.coupon-container .coupon-bets div{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size:13px;
+}
+.coupon-footer{
+    padding: 10px;
+    font-size:13px;
+}
