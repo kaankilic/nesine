@@ -1,6 +1,6 @@
 import './App.css';
 import Bet from './Components/Bet';
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import axios from 'axios';
 import { useCoupon } from './Context/CouponProvider'
 import CouponCard from './Components/CouponCard';
@@ -22,9 +22,7 @@ function App() {
 		  }
 	}
 
-	useEffect(() => {
-		loadBets()
-	}, [])
+	useMemo(() => loadBets(), [])
 
     if(isLoading){
         return (<div className="loading-container">Loading...</div>)
